@@ -1,0 +1,17 @@
+{
+  "category": "subscription_renewal",
+  "confidence": 0.95,
+  "summary": "Example",
+  "vendor": "Example",
+  "service": "Example",
+  "amount": 10.5,
+  "currency": "USD",
+  "renewal_date": "2027-01-01",
+  "due_date": "2027-01-01",
+  "ticket_number": "X-1",
+  "incident_start": "2026-11-25T07:42:00+04:00",
+  "urgency": "normal",
+  "suggested_action": "Example",
+  "needs_human_review": false,
+  "review_reason": "Example"
+}

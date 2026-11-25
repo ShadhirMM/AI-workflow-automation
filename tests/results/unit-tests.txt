@@ -1,0 +1,260 @@
+
+> ai-workflow-automation@1.0.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: cleanBody strips quoted replies and signatures
+ok 1 - cleanBody strips quoted replies and signatures
+  ---
+  duration_ms: 7.911
+  type: 'test'
+  ...
+# Subtest: cleanBody keeps forwarded content even below the forwarder signature
+ok 2 - cleanBody keeps forwarded content even below the forwarder signature
+  ---
+  duration_ms: 1.2209
+  type: 'test'
+  ...
+# Subtest: HTML emails are converted to text
+ok 3 - HTML emails are converted to text
+  ---
+  duration_ms: 2.5406
+  type: 'test'
+  ...
+# Subtest: email block includes headers and is capped
+ok 4 - email block includes headers and is capped
+  ---
+  duration_ms: 1.5496
+  type: 'test'
+  ...
+# Subtest: senderDomain
+ok 5 - senderDomain
+  ---
+  duration_ms: 1.8026
+  type: 'test'
+  ...
+# Subtest: request uses structured outputs, low effort and refusal fallbacks
+ok 6 - request uses structured outputs, low effort and refusal fallbacks
+  ---
+  duration_ms: 2.1984
+  type: 'test'
+  ...
+# Subtest: schema follows structured-output limits (all objects closed, no numeric/string constraints)
+ok 7 - schema follows structured-output limits (all objects closed, no numeric/string constraints)
+  ---
+  duration_ms: 4.1261
+  type: 'test'
+  ...
+# Subtest: extractResult handles text, refusal, truncation, bad JSON, empty
+ok 8 - extractResult handles text, refusal, truncation, bad JSON, empty
+  ---
+  duration_ms: 1.5054
+  type: 'test'
+  ...
+# Subtest: config check catches bad values
+ok 9 - config check catches bad values
+  ---
+  duration_ms: 1.7028
+  type: 'test'
+  ...
+# Subtest: Make HTTP body template produces exactly the request the code sends
+ok 10 - Make HTTP body template produces exactly the request the code sends
+  ---
+  duration_ms: 9.4625
+  type: 'test'
+  ...
+# Subtest: generated Make and Sheets files are up to date (run npm run export:make)
+ok 11 - generated Make and Sheets files are up to date (run npm run export:make)
+  ---
+  duration_ms: 42.1938
+  type: 'test'
+  ...
+# Subtest: every fixture behaves as expected in the full simulation
+ok 12 - every fixture behaves as expected in the full simulation
+  ---
+  duration_ms: 130.1739
+  type: 'test'
+  ...
+# Subtest: duplicate delivery is skipped and does not call Claude
+ok 13 - duplicate delivery is skipped and does not call Claude
+  ---
+  duration_ms: 4.316
+  type: 'test'
+  ...
+# Subtest: replay after a partial failure does not duplicate the finished actions
+ok 14 - replay after a partial failure does not duplicate the finished actions
+  ---
+  duration_ms: 5.5755
+  type: 'test'
+  ...
+# Subtest: temporary sink errors are retried; failure alert falls back to email when the alert channel is down
+ok 15 - temporary sink errors are retried; failure alert falls back to email when the alert channel is down
+  ---
+  duration_ms: 9.665
+  type: 'test'
+  ...
+# Subtest: failure alert names the stage, the error, the dead-letter row and the next step
+ok 16 - failure alert names the stage, the error, the dead-letter row and the next step
+  ---
+  duration_ms: 36.6661
+  type: 'test'
+  ...
+# Subtest: canary records a heartbeat without calling Claude
+ok 17 - canary records a heartbeat without calling Claude
+  ---
+  duration_ms: 8.0682
+  type: 'test'
+  ...
+# Subtest: every log row and dead letter keeps the message ID for tracing
+ok 18 - every log row and dead letter keeps the message ID for tracing
+  ---
+  duration_ms: 48.3686
+  type: 'test'
+  ...
+# Subtest: secret scanner finds planted secrets and ignores clean text
+ok 19 - secret scanner finds planted secrets and ignores clean text
+  ---
+  duration_ms: 5.8411
+  type: 'test'
+  ...
+# Subtest: classifyError: temporary vs permanent
+ok 20 - classifyError: temporary vs permanent
+  ---
+  duration_ms: 6.1828
+  type: 'test'
+  ...
+# Subtest: withRetry: succeeds after temporary errors, waits the configured intervals
+ok 21 - withRetry: succeeds after temporary errors, waits the configured intervals
+  ---
+  duration_ms: 18.8217
+  type: 'test'
+  ...
+# Subtest: withRetry: stops after maxAttempts retries and marks the error exhausted
+ok 22 - withRetry: stops after maxAttempts retries and marks the error exhausted
+  ---
+  duration_ms: 3.3779
+  type: 'test'
+  ...
+# Subtest: withRetry: permanent errors are not retried
+ok 23 - withRetry: permanent errors are not retried
+  ---
+  duration_ms: 1.2363
+  type: 'test'
+  ...
+# Subtest: nextStepFor gives a root-cause hint per error
+ok 24 - nextStepFor gives a root-cause hint per error
+  ---
+  duration_ms: 1.8408
+  type: 'test'
+  ...
+# Subtest: router: renewal → register row + task 14 days before renewal
+ok 25 - router: renewal → register row + task 14 days before renewal
+  ---
+  duration_ms: 9.7677
+  type: 'test'
+  ...
+# Subtest: router: task due date is never in the past
+ok 26 - router: task due date is never in the past
+  ---
+  duration_ms: 1.3565
+  type: 'test'
+  ...
+# Subtest: router: outage and security raise alerts; security is always URGENT and p1
+ok 27 - router: outage and security raise alerts; security is always URGENT and p1
+  ---
+  duration_ms: 1.4606
+  type: 'test'
+  ...
+# Subtest: router: access request → task + draft reply (never sent automatically); other → nothing
+ok 28 - router: access request → task + draft reply (never sent automatically); other → nothing
+  ---
+  duration_ms: 2.0268
+  type: 'test'
+  ...
+# Subtest: router: review → ReviewQueue row + review task
+ok 29 - router: review → ReviewQueue row + review task
+  ---
+  duration_ms: 2.5533
+  type: 'test'
+  ...
+# Subtest: S2: renewals due in exactly 30/7/1 days or overdue
+ok 30 - S2: renewals due in exactly 30/7/1 days or overdue
+  ---
+  duration_ms: 2.9421
+  type: 'test'
+  ...
+# Subtest: S3: health status OK / WARNING / ALERT
+ok 31 - S3: health status OK / WARNING / ALERT
+  ---
+  duration_ms: 2.8019
+  type: 'test'
+  ...
+# Subtest: S4: watchdog fires only when the canary is late
+ok 32 - S4: watchdog fires only when the canary is late
+  ---
+  duration_ms: 1.0472
+  type: 'test'
+  ...
+# Subtest: accepts a correct, confident answer
+ok 33 - accepts a correct, confident answer
+  ---
+  duration_ms: 38.4713
+  type: 'test'
+  ...
+# Subtest: schema: rejects wrong types, unknown fields, bad enum, fake dates
+ok 34 - schema: rejects wrong types, unknown fields, bad enum, fake dates
+  ---
+  duration_ms: 4.2283
+  type: 'test'
+  ...
+# Subtest: schema failure goes to review
+ok 35 - schema failure goes to review
+  ---
+  duration_ms: 3.1826
+  type: 'test'
+  ...
+# Subtest: low confidence and AI-requested review go to review
+ok 36 - low confidence and AI-requested review go to review
+  ---
+  duration_ms: 2.224
+  type: 'test'
+  ...
+# Subtest: missing required field for the category goes to review
+ok 37 - missing required field for the category goes to review
+  ---
+  duration_ms: 1.6842
+  type: 'test'
+  ...
+# Subtest: amount must appear in the email (catches a confident wrong number)
+ok 38 - amount must appear in the email (catches a confident wrong number)
+  ---
+  duration_ms: 2.9299
+  type: 'test'
+  ...
+# Subtest: Arabic-Indic digits are normalised
+ok 39 - Arabic-Indic digits are normalised
+  ---
+  duration_ms: 1.4257
+  type: 'test'
+  ...
+# Subtest: dates far outside the expected range go to review
+ok 40 - dates far outside the expected range go to review
+  ---
+  duration_ms: 1.07
+  type: 'test'
+  ...
+# Subtest: renewals and invoices from untrusted domains go to review; internal forwards are fine
+ok 41 - renewals and invoices from untrusted domains go to review; internal forwards are fine
+  ---
+  duration_ms: 36.275
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1982.8358

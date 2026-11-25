@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "category",
+    "confidence",
+    "summary",
+    "vendor",
+    "service",
+    "amount",
+    "currency",
+    "renewal_date",
+    "due_date",
+    "ticket_number",
+    "incident_start",
+    "urgency",
+    "suggested_action",
+    "needs_human_review",
+    "review_reason"
+  ],
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": ["subscription_renewal", "vendor_invoice", "outage_notice", "security_alert", "access_request", "other"]
+    },
+    "confidence": { "type": "number" },
+    "summary": { "type": "string" },
+    "vendor": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+    "service": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+    "amount": { "anyOf": [{ "type": "number" }, { "type": "null" }] },
+    "currency": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+    "renewal_date": { "anyOf": [{ "type": "string", "format": "date" }, { "type": "null" }] },
+    "due_date": { "anyOf": [{ "type": "string", "format": "date" }, { "type": "null" }] },
+    "ticket_number": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+    "incident_start": { "anyOf": [{ "type": "string", "format": "date-time" }, { "type": "null" }] },
+    "urgency": { "type": "string", "enum": ["low", "normal", "high", "critical"] },
+    "suggested_action": { "type": "string" },
+    "needs_human_review": { "type": "boolean" },
+    "review_reason": { "anyOf": [{ "type": "string" }, { "type": "null" }] }
+  }
+}

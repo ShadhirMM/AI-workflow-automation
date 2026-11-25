@@ -1,0 +1,7 @@
+{
+  "outcome": "routed",
+  "route": "renewal",
+  "category": "subscription_renewal",
+  "confidence": 0.95,
+  "reasons": "Example"
+}

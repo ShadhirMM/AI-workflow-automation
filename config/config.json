@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "timezone": "Asia/Dubai",
+  "ai": {
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "maxTokens": 4096,
+    "anthropicVersion": "2026-10-21",
+    "fallbackBeta": "server-side-fallback-2026-07-01",
+    "maxEmailChars": 8000
+  },
+  "validation": {
+    "confidenceThreshold": 0.75,
+    "dateWindowDays": { "pastMax": 60, "futureMax": 800 },
+    "requiredFields": {
+      "subscription_renewal": ["vendor", "service", "renewal_date"],
+      "vendor_invoice": ["vendor", "amount", "currency", "due_date"],
+      "outage_notice": ["vendor", "service"],
+      "security_alert": ["service"],
+      "access_request": ["service"],
+      "other": []
+    },
+    "senderCheckCategories": ["subscription_renewal", "vendor_invoice"],
+    "internalDomains": ["familyoffice-demo.example"],
+    "trustedVendorDomains": [
+      "contoso-cloud.example",
+      "vaultpass.example",
+      "tailspin-domains.example",
+      "northwind-fibre.example",
+      "skylink-sat.example",
+      "fabrikam-backup.example",
+      "meshnet.example",
+      "homehub.example",
+      "tailspin-mobile.example"
+    ]
+  },
+  "retry": {
+    "maxAttempts": 3,
+    "intervalsSeconds": [15, 60, 300],
+    "temporaryStatuses": [408, 409, 425, 429, 500, 502, 503, 504, 529],
+    "temporaryCodes": ["ETIMEDOUT", "ECONNRESET", "ECONNREFUSED", "EAI_AGAIN", "TIMEOUT"],
+    "invalidAiOutputRetries": 1
+  },
+  "routing": {
+    "renewalTaskLeadDays": 14,
+    "invoiceTaskLeadDays": 3,
+    "todoistProject": "IT Ops (Demo)"
+  },
+  "schedules": {
+    "renewalWarningDays": [30, 7, 1],
+    "watchdogMaxCanaryDelayMinutes": 20
+  },
+  "health": {
+    "reviewQueueWarningAt": 5,
+    "maxHoursWithoutRun": 24
+  }
+}

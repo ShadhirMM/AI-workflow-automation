@@ -1,0 +1,9 @@
+{
+  "messageId": "<example@domain.example>",
+  "from": "Vendor <billing@vendor.example>",
+  "to": "it@familyoffice-demo.example",
+  "date": "2026-11-25T07:10:00+04:00",
+  "subject": "Example subject",
+  "body": "Example body",
+  "canary": false
+}

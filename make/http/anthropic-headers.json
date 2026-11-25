@@ -1,0 +1,6 @@
+{
+  "content-type": "application/json",
+  "x-api-key": "{{keychain: Anthropic API key}}",
+  "anthropic-version": "2026-10-21",
+  "anthropic-beta": "server-side-fallback-2026-07-01"
+}

@@ -1,0 +1,9 @@
+node_modules/
+out/
+.env
+.env.*
+!.env.example
+*.log
+rollback.json
+# Raw Make exports before scrubbing
+make/blueprints/*.raw.json

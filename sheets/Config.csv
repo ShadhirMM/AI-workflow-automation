@@ -1,0 +1,6 @@
+key,value,notes
+confidence_threshold,0.75,"Below this, items go to ReviewQueue"
+renewal_warning_days,"30,7,1",S2 warns exactly this many days before renewal
+review_queue_warning_at,5,S3 WARNING threshold
+trusted_domains,"familyoffice-demo.example,contoso-cloud.example,vaultpass.example,tailspin-domains.example,northwind-fibre.example,skylink-sat.example,fabrikam-backup.example,meshnet.example,homehub.example,tailspin-mobile.example",Senders allowed for renewals and invoices
+alert_channel,slack-webhook,Fallback: email
